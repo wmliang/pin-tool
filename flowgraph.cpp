@@ -132,7 +132,6 @@ VOID Routine(RTN rtn, VOID *v)
     RTN_Open(rtn);
             
     // Insert a call at the entry/exit point of a routine
-//    RTN_InsertCall(rtn, IPOINT_BEFORE, (AFUNPTR)call_in, IARG_PTR, rc, IARG_END);
     RTN_InsertCall(rtn, IPOINT_BEFORE, (AFUNPTR)call_in,
 					IARG_PTR, rc,
 					IARG_END);
@@ -151,6 +150,7 @@ VOID Init()
 	outFile.setf(ios::showbase);
     outFile << "----=Start of Flow Graph=----" << endl;
 
+	// Routine in ExceptList will not appear
     ExceptList.push_back(".plt");
     ExceptList.push_back("__do_global_ctors_aux");
     ExceptList.push_back("__do_global_dtors_aux");
