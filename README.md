@@ -1,5 +1,7 @@
-flowgraph
+PIN tool
 =========
-A PIN tool
+A set of my PIN tool
 
-Draft a flow graph with c/c++ program
+flowgraph - Draft a flow graph with c/c++ program
+
+itrace2 - Trace all memory and register access for each user level instruction
